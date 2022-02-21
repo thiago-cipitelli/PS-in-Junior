@@ -1,0 +1,68 @@
+section {
+  padding: 144px 13% 3% 13%; 
+}
+form {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+label {
+  font-size: 2rem;
+  font-weight: 500;
+}
+input {
+  border: none;
+  border-bottom: 1px solid #000;
+  font-size: 2rem;
+}
+input:focus {
+  outline: none;
+}
+.pfp {
+  border-radius: 50%;
+  width: 200px;
+  height: 200px;
+  margin-right: 3.5rem;
+}
+h1 {
+  font-size: 4.2rem;
+  font-weight: 600;
+  color: #000;
+  margin: 0;
+  padding: 1rem 0;
+}
+.line {
+  display: flex;
+  padding: 1.4rem 0;
+}
+.nome {
+  width: 100%;
+  padding-right: 1.4rem
+}
+.nome input {
+  width: 100%;
+}
+.mail {
+  width: 100%;
+}
+.mail input {
+  width: 100%;
+}
+.card {
+  display: flex;
+  padding: 3rem 0;
+}
+.info {
+  display: flex;
+  flex-direction: column;
+}
+.btn {
+  align-self: center;
+  border: none;
+  color: #FFF;
+  padding: .8rem 4.1rem;
+  margin-top: 3rem;
+  background: #2C5680;
+  font-size: 2.4rem;
+  font-weight: 600;
+}

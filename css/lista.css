@@ -8,6 +8,15 @@ input {
   margin: 0;
   padding: 0;
 }
+h4 {
+  padding: 1rem 0;
+}
+.image {
+  flex-shrink: 0;
+  width: 430px;
+  height: 330px;
+  background-size: cover;
+}
 .menu {
   padding-top: 2rem;
 }
@@ -40,8 +49,19 @@ input {
   line-height: 20px;
   text-align: left;
 }
+.data {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 2rem;
+}
 .info {
   padding: 0 4rem;
+}
+.right {
+  text-align: right;
+}
+.right p {
+  text-align: right;
 }
 .box-bg {
   z-index: -1;
@@ -52,5 +72,16 @@ input {
   border: 4px solid #333333;
   box-sizing: border-box;
   left: -30px;
+  top: 30px;
+}
+.box-bg-right {
+  z-index: -1;
+  position: absolute;
+  width: 430px;
+  height: 330px;
+  background: #2C5680;
+  border: 4px solid #333333;
+  box-sizing: border-box;
+  right: -30px;
   top: 30px;
 }
