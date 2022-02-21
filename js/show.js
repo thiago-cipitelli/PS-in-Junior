@@ -45,7 +45,7 @@ const deleteWolf = () => {
   fetch(url + key, config)
   .then((response) => response.json())
     .then((wolves)=> {
-      console.log("foi")
+      alert("lobo excluido")
     })
     .catch((error) => {
       console.log(error)

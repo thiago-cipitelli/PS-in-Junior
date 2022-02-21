@@ -67,6 +67,12 @@ li p {
   left: -30px;
   top: 30px;
 }
+.image {
+  flex-shrink: 0;
+  width: 430px;
+  height: 330px;
+  background-size: cover;
+}
 .wolf {
   display: flex;
   position: relative;

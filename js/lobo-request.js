@@ -4,7 +4,7 @@ let currentPage = 1;
 const getWolves = () => {
   fetch(url)
     .then((response) => response.json())
-    .then((wolf)=> {
+  .then((wolf)=> {
       return wolf
     })
 }
@@ -63,23 +63,41 @@ function alerta () {
   alert("inicio")
 }
 
-const listWolves = (pag) => {
+const search = () => {
+  let check = document.getElementById("chkbox").checked 
+  if (check) {
+    listWolves(1, check)
+  }else{
+    listWolves(1, false)
+  }
+}
+
+const listWolves = (pag, check) => {
   let cont = 1
+  let newurl = url
+  let button = ''
+  check?newurl+="/adopted":0
+
   const body = document.querySelector('.wolves')
   body.innerHTML = ` `
-  fetch(url)
+  fetch(newurl)
     .then((response) => response.json())
     .then((wolves)=> {
       let list = listItems(wolves, pag, 4)
       list.map((item) => {
+        check?button=`<a class="btn green" id="${item.id}" ">Adotado</a>`:button=`<a class="btn" id="${item.id}" href="./show-lobo.html?id=${item.id}">Adotar</a>`
         const wolf = document.createElement("div")
         wolf.classList.add("wolf")
         if (cont%2==0) {
           wolf.classList.add("right")
           wolf.innerHTML = `
           <div class="info">
-          <h4>${item.name}</h4>
-          Idade: ${item.age} anos
+          <div class="data">`+ button + `
+            <div class="name">
+              <h4>${item.name}</h4>
+              Idade: ${item.age} anos
+            </div>
+          </div>
           <p>${item.description}</p>
           </div>
           <div class="box-bg-right"></div>
@@ -93,13 +111,15 @@ const listWolves = (pag) => {
               <div class="name">
                 <h4>${item.name}</h4>
                 Idade: ${item.age} anos
-              </div>
-            <button class="btn" ><a href="./show-lobo.html?id=${item.id}">Adotar</a></button>
+              </div>` + button
+                     +
+            `
             </div>
             <p>${item.description}</p>
           </div>`
         }
         body.appendChild(wolf)
+        
         cont++ 
       })
     })

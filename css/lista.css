@@ -11,6 +11,14 @@ input {
 h4 {
   padding: 1rem 0;
 }
+.pages {
+  text-align: center;
+}
+.pages a {
+  text-decoration: none;
+  color: #000;
+  font-size: 1.3rem;
+}
 .image {
   flex-shrink: 0;
   width: 430px;
@@ -26,17 +34,31 @@ h4 {
   justify-content: space-between;
 }
 .search-bar {
-  height: 43px;
+  font-size: 1.7rem;
+  height: 47px;
   width: 88%;
 }
-.btn {
+.go {
   color: #FFF;
   background: #DEB959;
   font-weight: 700;
-  font-size: 1rem;
-  width: 10%;
-  height: 45px;
+  font-size: 2rem;
+  padding: auto;
   border: none;
+}
+.btn {
+  align-self: center;
+  text-align: center;
+  text-decoration: none;
+  color: #FFF;
+  background: #DEB959;
+  font-weight: 700;
+  font-size: 2.5rem;
+  padding: .8rem 1.8rem;
+  border: none;
+}
+.green {
+  background: #7AAC3A;
 }
 .wolf {
   display: flex;
