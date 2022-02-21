@@ -1,0 +1,78 @@
+.title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-image: url("../assets/wolfBG.png");
+  padding-top: 130px;
+  min-height: 500px;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.title p {
+  font-size: 2rem;
+  max-width: 650px;
+  line-height: 25px;
+}
+.about {
+  background: #2C5680;
+  padding: 5% 16%;
+}
+about p {
+  line-height: 32px;
+}
+.values {
+  background: #333333;
+  padding: 5% 16%;
+}
+.icon-bg {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #FFF;
+  border-radius: 50%;
+  height: 190px;
+}
+ul {
+  display: flex;
+}
+li {
+  display: flex;
+  flex-direction: column;
+  margin: auto 60px;
+  max-width: 190px;
+}
+li p {
+  line-height: 20px;
+}
+.examples {
+  padding: 5% 16%;
+}
+.box-bg {
+  z-index: -1;
+  position: absolute;
+  width: 430px;
+  height: 330px;
+  background: #2C5680;
+  border: 4px solid #333333;
+  box-sizing: border-box;
+  left: -30px;
+  top: 30px;
+}
+.wolf {
+  display: flex;
+  position: relative;
+  justify-content: space-between;
+  padding-top: 4rem;
+}
+.wolf p {
+  color: #000;
+  line-height: 20px;
+  text-align: left;
+}
+.info {
+  padding: 0 4rem;
+}
+
