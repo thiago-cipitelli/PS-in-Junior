@@ -9,6 +9,41 @@ const getWolves = () => {
     })
 }
 
+const envia = () => {
+  let nome = document.forms["form"]["nome"].value;
+  let idade = document.forms["form"]["idade"].value;
+  let foto = document.forms["form"]["foto"].value;
+  let descr = document.forms["form"]["descr"].value;
+  if (nome == "" || idade == "" || foto == "" || descr == "" ) {
+    return false
+  }else{
+    console.log(nome, idade, foto, descr)
+    const body = {
+      wolf: {
+        name: nome,
+        age: idade,
+        image_url: foto,
+        description: descr
+      }
+    }
+    const config = {
+      method: "POST",
+      body: JSON.stringify(body),
+      headers: {
+        "content-Type": "application/json"
+      }
+    }
+    fetch(url, config)
+      .then((response) => response.json())
+      .then((wolf)=> {
+        console.log(wolf)
+      })
+      .catch((error) => {
+        console.log(error)
+      })
+  }
+}
+
 const listItems = (items, pageActual, limitItems) => {
   let result = []
   let totalPage = Math.ceil( items.length / limitItems)
@@ -59,7 +94,7 @@ const listWolves = (pag) => {
                 <h4>${item.name}</h4>
                 Idade: ${item.age} anos
               </div>
-              <button class="btn">Adotar</button>
+            <button class="btn" ><a href="./show-lobo.html?id=${item.id}">Adotar</a></button>
             </div>
             <p>${item.description}</p>
           </div>`

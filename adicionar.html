@@ -14,13 +14,14 @@
     <link href="./css/adicionar.css" rel="stylesheet">
   </head>
   <body>
+    <script src="./js/lobo-request.js"></script>
     <header>
-      <a class="effect lft" href="#">Nossos Lobinhos</a>
+      <a class="effect lft" href="./lista-lobos.html">Nossos Lobinhos</a>
       <img src="./assets/Group 3.svg" alt="">
-      <a class="effect rgt" href="#">Quem Somos</a>
+      <a class="effect rgt" href="./index.html">Quem Somos</a>
     </header>
     <section>
-      <form>
+      <form name="form" onsubmit="envia()">
         <h1>Coloque um Lobinho para Adoção</h1>
         <div class="line">
           <div class="nome">
@@ -29,19 +30,19 @@
           </div>
           <div class="idade">
             <label for="idade">Anos:</label><br>
-            <input maxlength="3" size="2" type="text" name="idade" value="">
+            <input maxlength="3" size="2" type="number" name="idade" value="">
           </div>
         </div>
         <div class="line">
           <div class="link">
             <label for="">Link da Foto:</label><br>
-            <input type="" name="" value="">
+            <input type="" name="foto" value="">
           </div>
         </div>
         <div class="line">
             <div class="desc">
               <label for="">Descrição:</label><br>
-              <textarea rows="5" col="100%"></textarea>
+              <textarea rows="5" col="100%" name="descr"></textarea>
             </div>
         </div>
         <button class="btn" type="submit">Salvar</button>
