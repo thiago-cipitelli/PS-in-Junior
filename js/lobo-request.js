@@ -124,11 +124,25 @@ const listWolves = (pag, check) => {
       })
     })
   const pages = document.querySelector('.pages')
-  pages.innerHTML = `<a href="#" onclick="listWolves(${pag-1})"> ${pag-1} </a> 
+  if (pag == 1 || pag == 2) {
+    pages.innerHTML = `<a href="#" onclick="listWolves(${pag})"> ${pag} </a> 
+    <a href="#" onclick="listWolves(${pag+1})"> ${pag+1} </a>
+    <a href="#" onclick="listWolves(${pag+2})"> ${pag+2} </a>
+    <a href="#" onclick="listWolves(${pag+3})"> ${pag+3} </a>
+    <a href="#" onclick="listWolves(${pag+4})"> ${pag+4} </a>
+    <a href="#" onclick="listWolves(${pag+1})"> >> </a>
+      `
+  }else{
+    pages.innerHTML = `
+    <a href="#" onclick="listWolves(${pag-1})"> << </a> 
+    <a href="#" onclick="listWolves(${pag-2})"> ${pag-2} </a>
+    <a href="#" onclick="listWolves(${pag-1})"> ${pag-1} </a> 
     <a href="#" onclick="listWolves(${pag})"> ${pag} </a>
     <a href="#" onclick="listWolves(${pag+1})"> ${pag+1} </a>
-
+    <a href="#" onclick="listWolves(${pag+2})"> ${pag+2} </a>
+    <a href="#" onclick="listWolves(${pag+1})"> >> </a>
     `
+  }
 }
 listWolves(currentPage)
 
